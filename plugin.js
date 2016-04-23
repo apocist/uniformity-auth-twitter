@@ -9,7 +9,7 @@ module.exports = function(callback) {
 		loadOrder:{
 			'passport.strategy': [{
 				order: 2000,//doesn't really matter
-				item: __dirname+'/app/controller/auth/twitter.auth.server.strategy.js'
+				item: __dirname+'/app/controllers/auth/twitter.auth.server.strategy.js'
 			}]
 		},
 		defaults: require(__dirname+'/config/defaults.json')
