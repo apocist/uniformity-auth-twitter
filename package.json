@@ -1,7 +1,7 @@
 {
   "name": "uniformity-auth-twitter",
-  "version": "0.0.2",
-  "description": "Uniformity Plugin - Twitter PAssport Strategy",
+  "version": "0.0.3",
+  "description": "Uniformity Plugin - Twitter Passport Strategy",
   "main": "plugin.js",
   "repository": {
     "type": "git",
