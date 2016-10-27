@@ -28,6 +28,7 @@ module.exports = function(app) {
 			// User.findOne won't fire until we have all our data back from Twitter
 			process.nextTick(function() {
 
+				//TODO Check if user is already logged in first(adding a second intergration)
 				TwitterModel.findOne({ 'id' : profile.id }, function(err, strategy) {
 
 					// if there is an error, stop everything and return that
@@ -38,7 +39,15 @@ module.exports = function(app) {
 					// if the user is found then log them in
 					if (strategy) {
 						if(strategy.user){
-							//TODO update the twitter profile
+							strategy.username = profile.username;
+							strategy.displayName = profile.displayName;
+							strategy.lastStatus = profile._json.status.text;
+							strategy.modified = Date.now();
+							strategy.save(function (err) {
+								if (err) {
+									console.error('Strategy Save Error', err)
+								}
+							});
 							return done(null, strategy.user, 'User Found and Logged In'); // user found, return that user
 						} else {
 							console.log('Error..? there is no user attached to strategy..?');
@@ -53,7 +62,7 @@ module.exports = function(app) {
 						twitter.id = profile.id;
 						twitter.token = token;
 						twitter.username = profile.username;
-						twitter.displayName = profile.displayName;
+						twitter.displayName = profile.displayName;//should ensure that ALL strategies have a displayName
 						twitter.lastStatus = profile._json.status.text;
 
 						//Record will be created and saved in the UserController

@@ -13,6 +13,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
+/.idea/vcs.xml
 coverage
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
@@ -29,6 +30,6 @@ build/Release
 node_modules
 
 # PhpStorm Configuration
-.idea/
+/.idea/
 
 # Created by .ignore support plugin (hsz.mobi)
