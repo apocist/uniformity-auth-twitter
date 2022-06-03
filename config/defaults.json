@@ -1,0 +1,9 @@
+{
+	"pluginController": {
+		"uniformity-auth-twitter": {
+			"apikey" : "<api key here>",
+			"apisecret" : "<api secret here>",
+			"callbackURL" : "http://<domain.com.here>/auth/login/twitter/callback"
+		}
+	}
+}

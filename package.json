@@ -1,0 +1,29 @@
+{
+  "name": "uniformity-auth-twitter",
+  "version": "0.1.1",
+  "description": "Uniformity Plugin - Twitter Passport Strategy",
+  "main": "plugin.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apocist/uniformity-auth-twitter.git"
+  },
+  "keywords": [
+    "uniformity",
+    "plugin",
+    "auth",
+    "passport",
+    "twitter"
+  ],
+  "author": "Apocist <apocist@yahoo.com> (http://inverseinnovations.com/)",
+  "license": "LGPL-2.1",
+  "bugs": {
+    "url": "https://github.com/apocist/uniformity-auth-twitter/issues"
+  },
+  "homepage": "http://inverseinnovations.com",
+  "dependencies": {
+    "passport-twitter": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=4.2.1 <=5.4.0"
+  }
+}
